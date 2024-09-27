@@ -4,6 +4,12 @@ import java.nio.file.Path
 
 class FileReader {
 
+    /** Transforma un fichero de tipo CSV a un mapa
+     *
+     * @param csvPath Ruta del fichero CSV
+     *
+     * @return Mapa con la información del fichero
+     */
     fun getMarketInfo(csvPath: Path): Map<String, List<Float>> {
         if (Files.notExists(csvPath)) {
             throw IllegalArgumentException(" - No existe el archivo")
